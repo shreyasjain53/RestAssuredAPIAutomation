@@ -29,4 +29,9 @@ public class GetPostManWorkSpace extends Base {
 
 		System.out.println("Status Code " + response.getStatusCode());
 	}
+
+	@Test
+	public void printEnvironmentVariables(){
+		loadEnvironmentVariables("POSTMAN");
+	}
 }
