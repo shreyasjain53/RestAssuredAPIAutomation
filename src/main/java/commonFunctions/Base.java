@@ -39,6 +39,21 @@ public class Base {
 		return prop;
 	}
 
+	/**
+ * Loads environment variables from an XML file based on the specified product name.
+ * 
+ * <p>This method reads an XML file named "EnvironmentVariables.xml" located in the 
+ * root directory of the project. It searches for a product element whose name matches 
+ * the provided productName, and then retrieves the URL and API key associated with that product. 
+ * The URL and API key are printed to the console once a match is found.</p>
+ * 
+ * <p>If no matching product is found, no environment variables are loaded.</p>
+ * 
+ * @param productName The name of the product whose environment variables need to be loaded.
+ *                    The product name is case-insensitive.
+ * 
+ * <p>Note: The function assumes that the XML structure and file are correctly formatted.</p>
+ */
 	public void loadEnvironmentVariables(String productName) {
 		String filePath = System.getProperty("user.dir") + File.separator + "EnvironmentVariables.xml";
 		File xmlFile = new File(filePath);
