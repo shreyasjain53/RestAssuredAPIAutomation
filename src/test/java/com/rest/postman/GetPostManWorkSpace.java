@@ -22,8 +22,7 @@ public class GetPostManWorkSpace extends Base {
 		RestAssured.config = RestAssuredConfig.newConfig()
 				.sslConfig(SSLConfig.sslConfig().allowAllHostnames().relaxedHTTPSValidation());
 
-		Response response = RestAssured.given().header("X-API-Key", data.getProperty("apiKey"))
-				.contentType("application/json").get("/workspaces");
+		Response response = RestAssured.given().header("X-API-Key", data.getProperty("apiKey")).contentType("application/json").get("/workspaces");
 
 		System.out.println(response.getBody().asString());
 
